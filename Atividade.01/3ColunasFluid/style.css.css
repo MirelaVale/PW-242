@@ -1,0 +1,26 @@
+
+#main {
+    width: 45%;
+    margin: 0 2.5%;
+    float: left;
+    background-color:skyblue;
+}
+#links {
+    width: 22.5%;
+    margin: 0 0 0 2.5%;
+    float: left;
+    background-color: darkcyan;
+}
+#news {
+    width: 22.5%;
+    margin: 0 2.5% 0 0;
+    float: left;
+    background-color: darkcyan;
+}
+#header {
+    background-color: antiquewhite;
+}
+#footer {
+    clear: left;
+    background-color: antiquewhite;
+}

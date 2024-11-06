@@ -1,0 +1,22 @@
+#wrapper {
+    width: 960px;
+}
+#main {
+    float: left;
+    width: 650px;
+    margin: 0 20px;
+    background-color: rgb(123, 171, 213);
+}
+#extras {
+    float: left;
+    width: 250px;
+    margin: 0 20px 0 0;
+    background-color:rgb(127, 238, 255);
+}
+#header {
+    background-color: antiquewhite;
+}
+#footer {
+    clear: left;
+    background-color: antiquewhite;
+}

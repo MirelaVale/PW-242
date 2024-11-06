@@ -1,0 +1,20 @@
+
+#main {
+    width: 60%;
+    margin: 0 5%;
+    float: left;
+    background-color:skyblue;
+}
+#extras {
+    width: 25%;
+    margin: 0 5% 0 0;
+    float: left;
+    background-color: darkcyan;
+}
+#header {
+    background-color: antiquewhite;
+}
+#footer {
+    clear: left;
+    background-color: antiquewhite;
+}
