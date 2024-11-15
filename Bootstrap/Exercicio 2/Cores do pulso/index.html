@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Pulseiras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Cores do Pulso</a>
+            <ul class="nav-links">
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#precos">Preços</a></li>
+                <li><a href="javascript:void(0)" onclick="mostrarContato()">Contato</a></li>
+            </ul>
+            <div class="carrinho">
+                <a href="javascript:void(0)" onclick="mostrarCarrinho()">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Carrinho" class="carrinho-icon">
+                    <span id="contadorCarrinho">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCarrinho()">&times;</span>
+            <h2>Itens no Carrinho</h2>
+            <ul id="listaCarrinho"></ul>
+            <span class="close-icon" onclick="fecharCarrinho()">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828843.png" alt="Fechar" class="fechar-icon">
+        </span>
+        </div>
+    </div>
+
+    <div id="modalContato" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharContato()">&times;</span>
+            <h2>Contato</h2>
+            <form id="formContato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <section id="produtos" class="container">
+        <h1>Pulseiras em Destaque</h1>
+        <div class="cards">
+            <div class="card">
+                <img src="Casual.jpg" alt="Pulseira 1">
+                <h3>Pulseira Casual</h3>
+                <p>Pulseira simples para o dia a dia.</p>
+                <p class="preco">R$ 29,90</p>
+                <button onclick="adicionarAoCarrinho('Pulseira Casual')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="Divetidamente.jpg" alt="Pulseira 2">
+                <h3>Pulseira filme</h3>
+                <p>Pulseira ideal para os amigos que vão assistir divetidamente juntos</p>
+                <p class="preco">R$ 34,90</p>
+                <button onclick="adicionarAoCarrinho('Pulseira filme')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="card">
+                <img src="Esportiva.webp" alt="Pulseira 3">
+                <h3>Pulseira Esportiva</h3>
+                <p>Pulseira perfeita para os fãs de Volei</p>
+                 <p class="preco">R$ 39,90</p>
+                <button onclick="adicionarAoCarrinho('Pulseira Esportiva')">Adicionar ao Carrinho</button>
+            </div>
+           <div class="card">
+            <img src="Colorida.jpg" alt="Pulseira 4">
+            <h3>Pulseira Colorida</h3>
+            <p>Pulseira vibrante para quem ama cores.</p>
+            <p class="preco">R$ 24,90</p>
+            <button onclick="adicionarAoCarrinho('Pulseira Colorida')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="card">
+            <img src="Azul.jpg" alt="Pulseira 5">
+            <h3>Pulseira Minimalista</h3>
+            <p>Design simples e elegante para qualquer ocasião.</p>
+            <p class="preco">R$ 49,90</p>
+            <button onclick="adicionarAoCarrinho('Pulseira Minimalista')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="card">
+            <img src="Conjunto.jpg" alt="Pulseira 6">
+            <h3>Conjunto de Pulseiras</h3>
+            <p>Estilosa e perfeita para qualquer look.</p>
+            <p class="preco">R$ 59,90</p>
+            <button onclick="adicionarAoCarrinho('Conjunto de Pulseiras')">Adicionar ao Carrinho</button>
+        </div>
+
+        </div>
+    </section>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
