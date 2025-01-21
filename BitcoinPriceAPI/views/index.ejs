@@ -1,0 +1,22 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço Atual do Bitcoin</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Preço Atual do Bitcoin</h1>
+    <div id="precoBit">
+        <p>Valor em USD: <%= usd %> em <%=updatedTime%></p>
+        <p>Valor em GBP: <%= gbp %> em <%=updatedTime%></p>
+        <p>Valor em EUR: <%= eur %> em <%=updatedTime%></p>
+    </div>
+    
+    <button id="botaoPreco">Atualizar</button>
+
+    <script src="/script.js"></script>
+</body>
+</html>

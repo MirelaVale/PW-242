@@ -1,0 +1,103 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #000000; 
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    color: #7a0101; 
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+#precoBit {
+    background-color: rgba(155, 0, 0, 0.246); 
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    border: 2px solid #7a0101;
+}
+
+
+#precoBit h2 {
+    font-size: 1.5rem;
+    color: #7a0101;
+    margin-bottom: 1.5rem; 
+}
+
+
+#precoBit .precoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(24, 24, 24);
+    padding-bottom: 0.5rem;
+}
+
+#precoBit .precoItem:last-child {
+    border-bottom: none;
+}
+
+#precoBit .precoItem .moeda {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #7a0101; 
+}
+
+#precoBit .precoItem .preco {
+    font-size: 1.2rem;
+    color: #fff; 
+}
+
+/* Botão */
+#botaoPreco {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #000000; 
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botaoPreco:hover {
+    background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #precoBit h2 {
+        font-size: 1.2rem;
+    }
+
+    #precoBit .precoItem .moeda,
+    #precoBit .precoItem .preco {
+        font-size: 1rem;
+    }
+
+    #botaoPreco {
+        font-size: 0.9rem;
+    }
+}
