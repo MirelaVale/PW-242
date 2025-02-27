@@ -1,0 +1,54 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Cores do Pulso - Loja de Pulseiras Artesanais
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    script(src="/js/script.js" defer)
+  body
+    nav.navbar
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href="/") Cores do Pulso
+        ul.nav.navbar-nav.navbar-center
+          li: a(href="#sobre") Sobre Nós
+          li: a(href="#produtos") Produtos
+          li: a(href="#contato") Contato
+        .carrinho-container
+          button#btnCarrinho Carrinho (<span id="contadorCarrinho">0</span>)
+    
+    main.container
+      .row
+        .col-md-12
+          h1 Bem-vindo à Cores do Pulso
+          p Encontre as melhores pulseiras artesanais!
+
+      #produtos.row
+        each produto in produtos
+          .col-md-4
+            .produto
+              img(src="/images/" + produto.imagem, alt=produto.nome)
+              h2= produto.nome
+              p Preço: R$ #{produto.preco}
+              button.btn.btn-primary(onclick="adicionarAoCarrinho('#{produto.nome}')") Adicionar ao Carrinho
+    
+    #modalCarrinho.modal
+      .modal-content
+        span.close(onclick="fecharCarrinho()") &times;
+        h2 Seu Carrinho
+        ul#listaCarrinho.list-group
+        button.btn.btn-danger(onclick="fecharCarrinho()") Fechar
+
+    #modalContato.modal
+      .modal-content
+        span.close(onclick="fecharContato()") &times;
+        h2 Entre em Contato
+        form#formContato
+          label Nome:
+          input(type="text" required)
+          label Email:
+          input(type="email" required)
+          label Mensagem:
+          textarea(required)
+          button.btn.btn-primary(type="submit") Enviar

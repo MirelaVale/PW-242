@@ -1,0 +1,26 @@
+/* Ajusta as imagens para ficarem do mesmo tamanho */
+.card-img-top {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+/* Ajusta o tamanho do ícone do carrinho */
+.carrinho img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Define um espaçamento entre os elementos */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Centraliza o preço e adiciona espaçamento */
+.preco {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}

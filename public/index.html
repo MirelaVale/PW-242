@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores do Pulso</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card-img-top {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .preco {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Cores do Pulso</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#precos">Preços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)"
+                                onclick="mostrarContato()">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ícone do carrinho -->
+                <div class="carrinho">
+                    <a href="javascript:void(0)" onclick="mostrarCarrinho()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Carrinho"
+                            class="carrinho-icon">
+                        <span id="contadorCarrinho">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seção de Produtos -->
+    <section id="produtos" class="container text-center mt-4">
+        <h1>Pulseiras em Destaque</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images/Casual.jpg" class="card-img-top" alt="Pulseira Casual">
+                    <div class="card-body">
+                        <h3>Pulseira Casual</h3>
+                        <p>Pulseira simples para o dia a dia.</p>
+                        <p class="preco">R$ 29,90</p>
+                        <button class="btn btn-danger w-100" onclick="adicionarAoCarrinho('Pulseira Casual')">Adicionar
+                            ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images/Colorida.jpg" class="card-img-top" alt="Pulseira Colorida">
+                    <div class="card-body">
+                        <h3>Pulseira Colorida</h3>
+                        <p>Pulseira perfeita para quem ama bastante cores!</p>
+                        <p class="preco">R$ 34,90</p>
+                        <button class="btn btn-danger w-100"
+                            onclick="adicionarAoCarrinho('Pulseira Colorida')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images/Esportiva.webp" class="card-img-top" alt="Pulseira Esportiva">
+                    <div class="card-body">
+                        <h3>Pulseira Esportiva</h3>
+                        <p>Ideal para os fãs de vôlei!</p>
+                        <p class="preco">R$ 39,90</p>
+                        <button class="btn btn-danger w-100"
+                            onclick="adicionarAoCarrinho('Pulseira Esportiva')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images/Azul.jpg" class="card-img-top" alt="Pulseira Minimalista">
+                    <div class="card-body">
+                        <h3>Pulseira Minimalista</h3>
+                        <p>Design simples e elegante para qualquer ocasião.</p>
+                        <p class="preco">R$ 49,90</p>
+                        <button class="btn btn-danger w-100"
+                            onclick="adicionarAoCarrinho('Pulseira Minimalista')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images/Conjunto.jpg" class="card-img-top" alt="Conjunto de Pulseiras">
+                    <div class="card-body">
+                        <h3>Conjunto de Pulseiras</h3>
+                        <p>Estilosa e perfeita para qualquer look.</p>
+                        <p class="preco">R$ 59,90</p>
+                        <button class="btn btn-danger w-100"
+                            onclick="adicionarAoCarrinho('Conjunto de Pulseiras')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/images/Divertidamente.jpg" class="card-img-top" alt="Pulseira Filme">
+                    <div class="card-body">
+                        <h3>Pulseira Filme</h3>
+                        <p>Para quem ama Divertidamente!</p>
+                        <p class="preco">R$ 34,90</p>
+                        <button class="btn btn-danger w-100" onclick="adicionarAoCarrinho('Pulseira Filme')">Adicionar
+                            ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
